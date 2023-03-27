@@ -6,6 +6,7 @@ import { useWeb3React } from "@web3-react/core"
 import Web3 from 'web3';
 import { Spin } from 'antd';
 import { useSplitBalance,useBalance } from '../hooks/static';
+import '../style.scss'
 function Home() {
   const { active, account, library, connector, activate, deactivate } = useWeb3React();
   const [isConnect,setIsConnect] = useState(false);  //是否连接 控制按钮内样式
@@ -96,7 +97,7 @@ function Home() {
 }
 
   return (
-    <div>
+    <div className='home'>
       <button onClick = {Connect}>{
         isLoading
         ?<Spin></Spin>
