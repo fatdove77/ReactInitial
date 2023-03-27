@@ -1,24 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+// import './App.css';
+import Icon from 'supercons'
+//INTL
+import { IntlProvider, useIntl } from 'react-intl';
+import enUS from './locales/en-US.json'
+import zhCN from './locales/zh-CN.json'
 
+//路由
+import { HashRouter as Routes,useRoutes } from 'react-router-dom';
+
+//redux
+import { useDispatch,useSelector } from 'react-redux';
+//组件
+import Index from './Router/index'
 function App() {
+  const {lang}  = useSelector(store=>store.demo);
+  console.log(lang);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <IntlProvider locale={lang} messages={lang === 'en-US' ? enUS : zhCN}>
+      <Routes>
+        <Index></Index>
+      </Routes>
+    </IntlProvider>
   );
 }
 
