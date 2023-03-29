@@ -8,6 +8,8 @@ interface RefType {
  function useThrottle(fn: FnType, delay: number,setLoading: (value: boolean) => void, dep: any[] = []) {
   const { current } = useRef<RefType>({ fn, timer: null })
   current.fn = fn
+  console.log(fn);
+  
   return useCallback((...args: any[]) => {
     // console.log(args[0]);
     if (!current.timer) {

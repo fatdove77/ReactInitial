@@ -1,4 +1,3 @@
-// import './App.css';
 import Icon from 'supercons'
 //INTL
 import { IntlProvider, useIntl } from 'react-intl';
@@ -6,7 +5,7 @@ import enUS from './locales/en-US.json'
 import zhCN from './locales/zh-CN.json'
 
 //路由
-import { HashRouter as Routes,useRoutes } from 'react-router-dom';
+import { HashRouter as Routes,useNavigate,useRoutes } from 'react-router-dom';
 
 //redux
 import { useDispatch,useSelector } from 'react-redux';
