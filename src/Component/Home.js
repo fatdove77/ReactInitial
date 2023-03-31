@@ -8,7 +8,7 @@ import {NETWORK}  from '../BC_config/netConfig'
 function Home() {
   const {isConnect,isLoading,Connect,Disconnect,account} = useWeb3Hook();
   return (
-    <div>
+    <div className ="home">
       <Button
         loading={isLoading}
         onClick = {()=>Connect()}
