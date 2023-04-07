@@ -9,7 +9,6 @@ import './style.scss'
 import store from './store/index';
 import { Provider } from 'react-redux';
 
-
 //web3
 import { Web3ReactProvider } from '@web3-react/core'
 import { Web3Provider } from "@ethersproject/providers";
