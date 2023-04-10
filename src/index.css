@@ -1,7 +1,7 @@
 
 /* index.css */
 @tailwind base;
-@tailwind components;
+/* @tailwind components; */
 @tailwind utilities;
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
