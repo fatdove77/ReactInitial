@@ -27,23 +27,8 @@
   justify-content: space-between;
 }
 
-
-
-.MT_container{
-  padding: 1.2rem 1rem;
+.container{
   display: flex;
-  flex-direction: column;
-  justify-content: start;
-
-  .MT_topItem{
-    min-Height: 136px;
-    min-width: 343px;
-    padding: 1rem;
-    border-radius: 8px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: green; 
+  width: 100%;
+  background-color: pink;
 }
-}
-

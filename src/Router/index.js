@@ -1,21 +1,13 @@
 import React, { lazy, Suspense } from 'react'
 import { useRoutes } from 'react-router-dom';
 const Home = lazy(
-  async () => await import('../Component/Home')
+  async () => await import('../pages/Home')
 );
-
-const Person = lazy(
-  async () => await import('../Component/Person')
-);
-
-const Report = lazy(
-  async () => await import('../Component/Report')
+const Login = lazy(
+  async () => await import('../pages/Login')
 );
 
 
-const Rule = lazy(
-  async () => await import('../Component/Rule')
-);
 
 function Index() {
   const element = useRoutes([
@@ -24,20 +16,12 @@ function Index() {
       element: <Home></Home>
     },
     {
-      path: '/person',
-      element: <Person></Person>
+      path: '/login',
+      element: <Login></Login>
     },
-    {
-      path: '/report',
-      element: <Report></Report>
-    },
-    {
-      path: '/rule',
-      element: <Rule></Rule>
-    }
   ])
   return (
-    <div>
+    <div >
       <Suspense fallback={<p>loading</p>}>
           {element}
       </Suspense>
